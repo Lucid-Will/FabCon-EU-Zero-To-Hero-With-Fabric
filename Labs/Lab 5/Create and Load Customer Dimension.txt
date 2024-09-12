@@ -1,0 +1,17 @@
+CREATE TABLE [dim_customer](
+	[customer_id] [int] NOT NULL,
+	[customer_name] [varchar](100) NOT NULL,
+	[delivery_state_province] [varchar](50) NULL,
+    [delivery_city_name] [varchar](50) NULL,
+    [phone_number] [varchar](50) NULL
+)
+
+INSERT INTO [dim_customer]
+SELECT 
+    customer_id
+    ,customer_name
+    ,delivery_state_province
+    ,delivery_city_name
+    ,phone_number
+FROM 
+    [silver_lakehouse_wtc].[dbo].[customers]  <--- Update lakehouse reference

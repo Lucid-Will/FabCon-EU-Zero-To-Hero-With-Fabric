@@ -1,0 +1,30 @@
+CREATE TABLE dim_package_types AS
+SELECT
+    package_type_id
+    ,package_type_name
+    ,last_edited_by
+    ,valid_from
+    ,valid_to
+FROM [silver_lakehouse_wtc].[dbo].[package_types]; <--- Change lakehouse reference
+
+CREATE TABLE dim_salesperson AS
+SELECT
+    PersonID                person_id
+    ,FullName               salesperson_name
+    ,PhoneNumber            phone_number
+FROM [silver_lakehouse_wtc].[dbo].[salesperson]; <--- Change lakehouse reference
+
+CREATE TABLE fact_invoices AS
+SELECT
+    invoice_line_id
+    ,invoice_id
+    ,customer_id
+    ,delivery_method_id
+    ,salesperson_id
+    ,stock_item_id
+    ,package_type_id
+    ,invoice_date
+    ,quantity
+    ,unit_price
+    ,tax_rate
+FROM [silver_lakehouse_wtc].[dbo].[invoices]; <--- Change lakehouse reference

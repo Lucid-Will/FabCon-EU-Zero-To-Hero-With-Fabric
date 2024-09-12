@@ -1,0 +1,2 @@
+Connection URL: https://adlsfabconeu.dfs.core.windows.net/fabcon/synapse/workspaces/synw-fabcon-eu/warehouse/
+Access Key: WyKVzyBINk3NEu3Fr/YNgPMrp5tkEfX+obhjMCipi178iFVnqW3gBCm5Z/ZofpnOgRy7W1R3teZI+AStYSwSDA==

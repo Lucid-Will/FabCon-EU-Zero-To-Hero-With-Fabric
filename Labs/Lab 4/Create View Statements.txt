@@ -1,0 +1,20 @@
+-- View logic for stock items
+SELECT
+    StockItemID             stock_item_id
+    ,StockItemName          stock_item_name
+    ,Brand                  brand
+    ,SearchDetails          search_details
+FROM
+    [bronze_lakehouse_wtc].[dbo].[warehouse_stockitems] ws  <--- Change lakehouse reference
+
+-- View logic for customers
+SELECT
+    CustomerID
+    ,CustomerName
+    ,CityName               delivery_city_name
+    ,StateProvinceCode      delivery_state_province
+    ,PhoneNumber            phone_number
+FROM
+    [bronze_lakehouse_wtc].[dbo].[sales_customers] sc  <--- Change lakehouse reference
+JOIN [bronze_lakehouse_wtc].[dbo].[locations] l  <--- Change lakehouse reference
+    ON sc.DeliveryCityID = l.CityID

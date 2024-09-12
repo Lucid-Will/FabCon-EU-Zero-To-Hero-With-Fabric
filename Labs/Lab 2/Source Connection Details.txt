@@ -1,0 +1,5 @@
+Connection details for FIAD
+Server: asql-fabcon-eu.database.windows.net
+Database: sqldb-fabcon-eu
+username: read_only_user
+password: fabconeu2@24

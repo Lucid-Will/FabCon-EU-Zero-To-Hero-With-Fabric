@@ -1,0 +1,12 @@
+CREATE TABLE [dim_delivery_method](
+	[delivery_method_id] [int] NOT NULL,
+	[delivery_method_name] [varchar](100) NOT NULL,
+	[last_edited_by] [varchar](20) NOT NULL
+);
+
+COPY INTO [dbo].[dim_delivery_method]
+FROM 'https://blobfabconeu.blob.core.windows.net/fabconeu/delivery_method.csv'
+WITH (
+    FILE_TYPE = 'CSV',
+    FIRSTROW = 2
+);
