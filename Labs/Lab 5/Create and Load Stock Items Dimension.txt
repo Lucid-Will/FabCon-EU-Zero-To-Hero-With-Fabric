@@ -1,8 +1,7 @@
 CREATE TABLE dim_stock_items AS
 SELECT
-    StockItemID             stock_item_id
-    ,StockItemName          stock_item_name
-    ,Brand                  brand
-    ,SearchDetails          search_details
-    ,LastEditedBy           last_edited_by
+    stock_item_id
+    ,stock_item_name
+    ,brand
+    ,search_details
 FROM [silver_lakehouse_wtc].[dbo].[stock_items]; <--- Change lakehouse reference

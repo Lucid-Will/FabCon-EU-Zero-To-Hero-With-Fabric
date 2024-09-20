@@ -9,8 +9,8 @@ FROM
 
 -- View logic for customers
 SELECT
-    CustomerID
-    ,CustomerName
+    CustomerID              customer_id
+    ,CustomerName           customer_name
     ,CityName               delivery_city_name
     ,StateProvinceCode      delivery_state_province
     ,PhoneNumber            phone_number
