@@ -1,7 +1,0 @@
-SELECT b.name schema_name
-      ,a.name table_name
-      ,LOWER(CONCAT(LOWER(b.name), '_', (a.name))) stage_table
-FROM sys.tables a
-INNER JOIN sys.schemas b ON a.schema_id = b.schema_id
-WHERE a.name IN ('People', 'Suppliers', 'StockItems')
-AND a.name NOT LIKE '%Archive'
